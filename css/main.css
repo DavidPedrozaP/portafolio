@@ -1,5 +1,10 @@
 
 
+:root {
+  
+  --header-height: 60px
+}
+
 html {
   font-size: 16px;
   font-weight: 400;
@@ -18,12 +23,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
   max-width: 1024px;
   margin: 0 auto;
   
 }
-
+h3{
+  font-size: 1.5rem;
+}
 main {
   
   margin: 0;
@@ -34,11 +40,6 @@ img {
   max-width: 100%;
   width: auto;
 }
-
-.text--color {
-  color: var(--color-secundario);
-}
-
 
 .main {
   max-width: 1024px;
@@ -100,30 +101,44 @@ img {
 .skills {
   border: 1px dotted black;
   background-color: #fcda68;
+  padding: 0 auto;
 }
+
 
 .skills__container {
   margin: 20px;
 }
 
 .skills__block {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
 }
 .skill__contenedor-icono {
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  font-size: 1.1rem;
+  align-items: center;
+}
+.skill__contenedor-icono img{
+  align-items: center;
+  display: block;
 }
 
-
+.projects{
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .projects__container {
   
   margin: 20px;
 }
 
 .projects__apps {
-  flex-direction: column;
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  font-size: 1.1rem;
+  align-items: center;
 
 }
 
